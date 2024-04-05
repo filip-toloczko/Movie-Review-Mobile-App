@@ -76,14 +76,15 @@ class _MyHomePageState extends State<MyHomePage> {
               borderRadius: BorderRadius.circular(10)
             ),
             backgroundColor: Colors.purple,
-            title:
-            const Text(
-              "Movie Lists",
-              style: TextStyle(
-                color: Colors.blue,
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-              ),
+            title: Center(
+              child: const Text(
+                "Movie Lists",
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                ),
+              )
             ),
 
 
@@ -99,13 +100,18 @@ class _MyHomePageState extends State<MyHomePage> {
           SliverPersistentHeader(
             pinned: true,
             delegate: CategoryHeader(
-              minExtent: 50.0,
-              maxExtent: 100.0,
+              minExtent: 65.0,
+              maxExtent: 85.0,
               child: Container(
-                color: Colors.red,
-                child: Text(
-                  "Drama"
-                ),
+                color: Colors.teal,
+                child: Center(
+                  child: Text(
+                    "Drama",
+                    style: TextStyle(
+                      fontSize: 35
+                    ),
+                  ),
+                )
 
               )
             ),
@@ -140,7 +146,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             title: Text("Oppenheimer"),
                             subtitle: Text("Chris Nolan (2023)"),
                             isThreeLine: true,
-                            tileColor: Colors.yellow,
+                            tileColor: Colors.white,
                           ),
                         ),
                       ),
@@ -160,7 +166,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             title: Text("The Big Short"),
                             subtitle: Text("Adam McKay (2015)"),
                             isThreeLine: true,
-                            tileColor: Colors.yellow,
+                            tileColor: Colors.white,
                           ),
                         ),
                       ),
@@ -180,7 +186,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             title: Text("Ford vs Ferrari"),
                             subtitle: Text("James Mangold (2019)"),
                             isThreeLine: true,
-                            tileColor: Colors.yellow,
+                            tileColor: Colors.white,
                           ),
                         ),
                       ),
@@ -200,7 +206,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             title: Text("Dunkirk"),
                             subtitle: Text("Chris Nolan (2017)"),
                             isThreeLine: true,
-                            tileColor: Colors.yellow,
+                            tileColor: Colors.white,
                           ),
                         ),
                       ),
@@ -216,15 +222,20 @@ class _MyHomePageState extends State<MyHomePage> {
           SliverPersistentHeader(
             pinned: true,
             delegate: CategoryHeader(
-                minExtent: 50.0,
-                maxExtent: 100.0,
-                child: Container(
-                  color: Colors.red,
+              minExtent: 65.0,
+              maxExtent: 85.0,
+              child: Container(
+                color: Colors.greenAccent,
+                child: Center(
                   child: Text(
-                      "Science Fiction"
+                    "Science Fiction",
+                    style: TextStyle(
+                      fontSize: 35
+                    ),
                   ),
                 )
-            ),
+              ),
+            )
           ),
 
           SliverList(
@@ -250,7 +261,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             title: Text("Dune"),
                             subtitle: Text("D. Villeneuve (2021)"),
                             isThreeLine: true,
-                            tileColor: Colors.yellow,
+                            tileColor: Colors.white,
                           ),
                         ),
                       ),
@@ -269,7 +280,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             title: Text("Interstellar"),
                             subtitle: Text("Chris Nolan (2014)"),
                             isThreeLine: true,
-                            tileColor: Colors.yellow,
+                            tileColor: Colors.white,
                           ),
                         ),
                       ),
@@ -288,7 +299,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             title: Text("Blade Runner 2049"),
                             subtitle: Text("D. Villeneuve (2017)"),
                             isThreeLine: true,
-                            tileColor: Colors.yellow,
+                            tileColor: Colors.white,
                           ),
                         ),
                       ),
@@ -307,7 +318,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             title: Text("Inception"),
                             subtitle: Text("Chris Nolan (2010)"),
                             isThreeLine: true,
-                            tileColor: Colors.yellow,
+                            tileColor: Colors.white,
                           ),
                         ),
                       ),
@@ -323,14 +334,19 @@ class _MyHomePageState extends State<MyHomePage> {
           SliverPersistentHeader(
             pinned: true,
             delegate: CategoryHeader(
-                minExtent: 50.0,
-                maxExtent: 100.0,
-                child: Container(
-                  color: Colors.red,
+              minExtent: 65.0,
+              maxExtent: 85.0,
+              child: Container(
+                color: Colors.lightGreen,
+                child: Center(
                   child: Text(
-                      "Action"
+                    "Action",
+                    style: TextStyle(
+                      fontSize: 35
+                    ),
                   ),
                 )
+              )
             ),
           ),
 
@@ -357,7 +373,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             title: Text("Drive"),
                             subtitle: Text("Nicolas Refn (2011)"),
                             isThreeLine: true,
-                            tileColor: Colors.yellow,
+                            tileColor: Colors.white,
                           ),
                         ),
                       ),
@@ -376,7 +392,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             title: Text("The Batman"),
                             subtitle: Text("Matt Reeves (2022)"),
                             isThreeLine: true,
-                            tileColor: Colors.yellow,
+                            tileColor: Colors.white,
                           ),
                         ),
                       ),
@@ -395,7 +411,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             title: Text("Top Gun"),
                             subtitle: Text("Tony Scott (1986)"),
                             isThreeLine: true,
-                            tileColor: Colors.yellow,
+                            tileColor: Colors.white,
                           ),
                         ),
                       ),
@@ -414,7 +430,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             title: Text("Fury"),
                             subtitle: Text("David Ayer (2014)"),
                             isThreeLine: true,
-                            tileColor: Colors.yellow,
+                            tileColor: Colors.white,
                           ),
                         ),
                       ),
@@ -430,14 +446,19 @@ class _MyHomePageState extends State<MyHomePage> {
           SliverPersistentHeader(
             pinned: true,
             delegate: CategoryHeader(
-                minExtent: 50.0,
-                maxExtent: 100.0,
-                child: Container(
-                  color: Colors.red,
+              minExtent: 65.0,
+              maxExtent: 85.0,
+              child: Container(
+                color: Colors.yellow,
+                child: Center(
                   child: Text(
-                      "Horror"
+                    "Horror",
+                    style: TextStyle(
+                      fontSize: 35
+                    ),
                   ),
                 )
+              )
             ),
           ),
 
@@ -464,7 +485,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             title: Text("A Quiet Place"),
                             subtitle: Text("J. Krasinski (2018)"),
                             isThreeLine: true,
-                            tileColor: Colors.yellow,
+                            tileColor: Colors.white,
                           ),
                         ),
                       ),
@@ -483,7 +504,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             title: Text("Split"),
                             subtitle: Text("Shyamalan (2016)"),
                             isThreeLine: true,
-                            tileColor: Colors.yellow,
+                            tileColor: Colors.white,
                           ),
                         ),
                       ),
@@ -502,7 +523,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             title: Text("American Psycho"),
                             subtitle: Text("Mary Harron (2000)"),
                             isThreeLine: true,
-                            tileColor: Colors.yellow,
+                            tileColor: Colors.white,
                           ),
                         ),
                       ),
@@ -521,7 +542,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             title: Text("Jaws"),
                             subtitle: Text("Spielberg (1975)"),
                             isThreeLine: true,
-                            tileColor: Colors.yellow,
+                            tileColor: Colors.white,
                           ),
                         ),
                       ),
@@ -537,14 +558,19 @@ class _MyHomePageState extends State<MyHomePage> {
           SliverPersistentHeader(
             pinned: true,
             delegate: CategoryHeader(
-                minExtent: 50.0,
-                maxExtent: 100.0,
-                child: Container(
-                  color: Colors.red,
+              minExtent: 65.0,
+              maxExtent: 85.0,
+              child: Container(
+                color: Colors.amber,
+                child: Center(
                   child: Text(
-                      "Comedy"
+                    "Comedy",
+                    style: TextStyle(
+                      fontSize: 35
+                    ),
                   ),
                 )
+              )
             ),
           ),
 
@@ -571,7 +597,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             title: Text("The Hangover"),
                             subtitle: Text("Todd Phillips (2009)"),
                             isThreeLine: true,
-                            tileColor: Colors.yellow,
+                            tileColor: Colors.white,
                           ),
                         ),
                       ),
@@ -590,7 +616,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             title: Text("The Nice Guys"),
                             subtitle: Text("Shane Black (2016)"),
                             isThreeLine: true,
-                            tileColor: Colors.yellow,
+                            tileColor: Colors.white,
                           ),
                         ),
                       ),
@@ -609,7 +635,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             title: Text("21 Jump Street"),
                             subtitle: Text("Phil Lord (2012)"),
                             isThreeLine: true,
-                            tileColor: Colors.yellow,
+                            tileColor: Colors.white,
                           ),
                         ),
                       ),
@@ -628,7 +654,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             title: Text("Bad Boys"),
                             subtitle: Text("Michael Bay (1995)"),
                             isThreeLine: true,
-                            tileColor: Colors.yellow,
+                            tileColor: Colors.white,
                           ),
                         ),
                       ),
