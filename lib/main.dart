@@ -10,10 +10,10 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      //Routes for each screen
       initialRoute: '/home',
       routes: {
         '/home': (context) => const MyHomePage(),
@@ -297,7 +297,6 @@ class MyApp extends StatelessWidget {
           rating1: "43%",
           rating2: "6.8/10",
         ),
-
       },
     );
   }
