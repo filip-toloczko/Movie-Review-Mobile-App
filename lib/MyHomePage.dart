@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -8,6 +9,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  Offset? position;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,21 +84,46 @@ class _MyHomePageState extends State<MyHomePage> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)
                           ),
-                          child: ListTile(
-                            onTap: (){
-                              Navigator.pushNamed(context, '/oppenheimer');
+                          
+                          child: GestureDetector(
+                            onTapDown: (details){
+                              position = details.globalPosition;
                             },
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10)
+                            child: ListTile(
+                              onTap: (){
+                                Navigator.pushNamed(context, '/oppenheimer');
+                              },
+                              onLongPress: (){
+                                if(position != null){
+                                showMenu(
+                                  context: context,
+                                  position: RelativeRect.fromLTRB(
+                                    position!.dx,
+                                    position!.dy,
+                                    position!.dx,
+                                    position!.dy,
+                                  ),
+                                  items: <PopupMenuEntry>[
+                                    PopupMenuItem(child: Text('Option 1'), value: 1),
+                                    PopupMenuItem(child: Text('Option 2'), value: 2),
+                                    // add more options here
+                                  ],
+                                );
+                              }},
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10)
+                              ),
+                              leading: Image(
+                                image: AssetImage("images/oppenheimer.png"),
+                              ),
+                              title: Text("Oppenheimer"),
+                              subtitle: Text("Chris Nolan (2023)"),
+                              isThreeLine: true,
+                              tileColor: Colors.white,
                             ),
-                            leading: Image(
-                              image: AssetImage("images/oppenheimer.png"),
-                            ),
-                            title: Text("Oppenheimer"),
-                            subtitle: Text("Chris Nolan (2023)"),
-                            isThreeLine: true,
-                            tileColor: Colors.white,
-                          ),
+                          )
+                          
+
                         ),
                       ),
 
