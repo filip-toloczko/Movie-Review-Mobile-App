@@ -13,6 +13,7 @@ class PhotoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue.shade100,
       appBar: AppBar(
         toolbarHeight: 100,
         title: Text(

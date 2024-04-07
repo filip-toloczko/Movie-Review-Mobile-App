@@ -18,6 +18,7 @@ class InfoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.amber,
       appBar: AppBar(
         title: Text(title),
       ),
@@ -60,7 +61,7 @@ class InfoPage extends StatelessWidget {
               ),
             ),
             Text(
-              ("IMDB : $rating2\n"),
+              ("IMDb : $rating2\n"),
               style: const TextStyle(
                 fontSize: 35,
               ),
