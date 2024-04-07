@@ -103,8 +103,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                     position!.dx,
                                     position!.dy,
                                   ),
-                                  items: <PopupMenuEntry>[
-                                    PopupMenuItem(child: Text('Option 1'), value: 1),
+                                  items: [
+                                    PopupMenuItem(child: Text('Option 1'), value: 1, onTap: (){Navigator.pushNamed(context, '/oppenheimer2');},),
                                     PopupMenuItem(child: Text('Option 2'), value: 2),
                                     // add more options here
                                   ],

@@ -14,7 +14,10 @@ class PhotoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title + director),
+        toolbarHeight: 100,
+        title: Text(
+          (title),
+        ),
       ),
       body: Center(
         child: IconButton(icon: Image.asset(photo), onPressed: (){launchUrl(Uri.parse(site));},)
